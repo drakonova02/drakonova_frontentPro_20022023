@@ -1,9 +1,9 @@
 function done() {
     return new Promise((resolve) => {
         setTimeout(function() {
-            alert('Готово');
+            resolve('Готово');
         }, 2000);
     })
 }
 
-done();
+done().then(result => console.log(result))
